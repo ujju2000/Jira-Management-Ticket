@@ -51,6 +51,10 @@
     border-radius: 4px;
 }
 
+/* save option   */
+.save {
+    display : none;
+}
 /* colors  */
 .lightpink {
     background-color: lightpink;
@@ -195,5 +199,11 @@
     .action-btn-cont{
         margin-right: 30px;
     }
-
+    .save {
+        display : block;
+        padding : 7px;
+        display: flex;
+        align-items: flex-end;
+        cursor:  pointer;
+    }
 }

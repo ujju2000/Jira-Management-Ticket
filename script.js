@@ -12,7 +12,7 @@ let ticketLock = document.querySelector('.ticket-lock');
 let ticketLockFlag = true; // true -> lock 
 let colors = ["lightpink", "lightblue", "lightgreen", "black"];
 let toolBoxColors = document.querySelectorAll('.color');
-
+let save = document.querySelector('.save');
 let lockClass = "fa-lock";
 let unlockClass = "fa-lock-open";
 
@@ -58,13 +58,19 @@ for(let i =0;i<toolBoxColors.length;i++){
     })
 }
 add.addEventListener('click',(e) =>{
+   
     addFlag = !addFlag;
 
     // display modal    
-    if(addFlag)
+    if(addFlag){
+        // add.style.backgroundColor = "#6F1E51";
         modal.style.display = 'flex';
-    else 
+    }
+    else {
+        // add.style.backgroundColor = "#b33939";
+
         modal.style.display = 'none';
+    }
     // click and then create new modal  
 })
 
@@ -73,7 +79,13 @@ add.addEventListener('click',(e) =>{
 remove.addEventListener('click' , (e) =>{
 
     removeFlag = !removeFlag; //toggle button 
+    if(removeFlag) {
+        remove.style.backgroundColor = "#6F1E51";
+    }
+    else {
+        remove.style.backgroundColor = "#b33939";
 
+    }
 })
 
 textArea.addEventListener('keydown',(e) =>{
@@ -96,6 +108,11 @@ priorityColor.forEach((color) =>{
     })
 })
 
+save.addEventListener('click',(e) =>{
+    createTicket(ticketColor,textArea.value);
+    setModalToDefault();
+    addFlag = false;
+})
 
 function createTicket(ticketColor,ticketTask,ticketID){
     let id = ticketID || shortid();
