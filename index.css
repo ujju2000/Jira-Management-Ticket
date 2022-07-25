@@ -207,3 +207,40 @@
         cursor:  pointer;
     }
 }
+
+@media screen and (max-width : 400px){
+    .modal {
+        position: absolute;
+        width : 50vw;
+        height : 30vh;
+        top : 30%;
+        bottom : 10%;
+    }
+   
+    .toolbox-priority-cont {
+        margin-left: 1.4rem;
+        width : 40%;
+        /* margin-right: 2px; */
+        padding : 4px;
+    }
+    .color {
+        margin-left: 5px;
+    }
+    .border {
+        border : 2px solid yellow;
+    }
+    .action-btn-cont{
+        margin-right: 10px;
+        
+    }
+    .save {
+        display : block;
+        padding : 3px;
+        display: flex;
+        align-items: flex-end;
+        cursor:  pointer;
+        background-color: #6F1E51;
+        color: white;
+        /* height : 20px; */
+    }
+}
