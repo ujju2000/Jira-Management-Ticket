@@ -30,7 +30,6 @@
     width : 8rem;
     background-color: #b33939;
     display : flex;
-    
 
 }
 .action-btn-cont > *{
@@ -166,4 +165,35 @@
     padding-right:15px;
     padding-bottom: 10px;
    cursor : pointer
+}
+
+
+/* responsive */ 
+/* for phones  */
+@media screen and (min-width : 400px) and (max-width : 700px){
+    .modal {
+        position: absolute;
+        width : 50vw;
+        height : 35vh;
+        top : 30%;
+        bottom : 10%;
+        
+    }
+    .main-cont{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .toolbox-priority-cont {
+        width : 50%;
+        margin-right: 2px;
+    }
+    .color {
+        width : 2.4rem;
+    }
+    .action-btn-cont{
+        margin-right: 30px;
+    }
+
 }
